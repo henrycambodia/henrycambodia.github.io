@@ -5,10 +5,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Henry's Website!</title>
+    <style>
+        body {
+            background-color: #161616;
+            background-position: center top;
+            color: #ffffff;
+            margin: 40px auto;
+            max-width: 600px;
+            vertical-align: middle
+        }
+
+        p {
+            background-color: aqua;
+            padding: 10px;
+        }
+    </style>
 </head>
 
+
+
+
+
+<script>
+    class ImageLink extends HTMLElement {
+        constructor(link, title, img) {
+            super()
+            this
+            let shadow = this.attachShadow({ mode: "closed" });
+        }
+    }
+
+    function search(text) {
+
+    }
+
+    function mousemove(event) {
+        let x = 1;
+        let y = 1;
+        //x -= document.getElementById("Monkey").offsetLeft + (document.getElementById("Monkey").width) / 2
+        //y -= document.getElementById("Monkey").offsetTop + document.getElementById("Monkey").height
+        //document.getElementById("thingy").value = y * -1
+        //document.getElementById("thingy2").value = x
+        document.getElementById("ah").innerHTML =
+
+            document.getElementById("Monkey").style.position.x = 500 - (100000 / (y * -1));
+        document.getElementById("Monkey").style.position.y = 1000 - (y * -0.25);
+        document.getElementById("Monkey").width = 100000 / (y * -1);
+        document.getElementById("Monkey").height = y * -0.25;
+
+    }
+</script>
+
+
+
 <body>
-    <p>I am stupid!</p>
+    <img src="Monkey.jpg" alt="My brother" , id="Monkey" ,position="absoulute">
+    <marquee>I have 20 kids in my basement. This text will go away when the cops arive</marquee>
+    <header id="temp">Searchbar currently broken</header>
+
+
+    <searchbar>
+        <input id=" Search Bar" size="73px 60px"></input>
+    </searchbar>
+
+    <div class="row_cointaner" id="SiteCointainer">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
+            <img src="Monkey.jpg" class="grow-on-hover">
+            <header class="text">Monkey</header>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"><img src="apple.jpg"
+                class="grow-on-hover">
+            <header class="text">SuPeR aPpLe
+            </header>
+        </a>
+    </div>
+    <style>
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row_cointaner {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .grow-on-hover {
+            z-index: 0;
+            flex: 0 0 80px;
+            padding: 5px 5px;
+            position: relative;
+            margin: 20px 0px auto 0px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            overflow: visible;
+            transition: transform 100ms ease-out;
+            width: 80px;
+            height: 80px;
+        }
+
+        .grow-on-hover:hover {
+            z-index: 1;
+            transform: scale(1.5)
+        }
+    </style>
+
 </body>
 
 </html>
